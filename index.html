@@ -132,14 +132,14 @@
 
         $(function () {
             $('form').submit(function () {
-                const name    = $('input[name="name"]').val()??"";
-                const type = $('input[name="type"]').val()??"";
-                const gender  = $('input[name="gender"]').val()??"";
-                const personality  = $('input[name="personality"]').val()??"";
-                const intelligence = $('input[name="intelligence"]').val()??"";
-                const suffix = $('input[name="suffix"]').val()??"";
-                const firstPerson = $('input[name="firstPerson"]').val()??"";
-                const ailmentLocation = $('input[name="ailmentLocation"]').val()??"";
+                const name    = $('input[name="name"]').val()//??"";
+                const type = $('input[name="type"]').val()//??"";
+                const gender  = $('input[name="gender"]').val()//??"";
+                const personality  = $('input[name="personality"]').val()//??"";
+                const intelligence = $('input[name="intelligence"]').val()//??"";
+                const suffix = $('input[name="suffix"]').val()//??"";
+                const firstPerson = $('input[name="firstPerson"]').val()//??"";
+                const ailmentLocation = $('input[name="ailmentLocation"]').val()//??"";
 
                 const msg = `【うちの子登録】\n${name}\n${type}\n${gender}\n${personality}\n${intelligence}\n${suffix}\n${firstPerson}\n${ailmentLocation}`;
                 sendText(msg);
