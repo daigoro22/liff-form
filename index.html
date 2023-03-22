@@ -134,7 +134,7 @@
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val()??"";
                 const type = $('select[name="type"]').val()??"";
-                const gender  = $('input[name="gender"]').val()??"";
+                const gender  = $('input[name="gender"]:checked').val()??"";
                 const personality  = $('input[name="personality"]').val()??"";
                 const intelligence = $('input[name="intelligence"]').val()??"";
                 const suffix = $('input[name="suffix"]').val()??"";
