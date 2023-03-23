@@ -68,19 +68,177 @@
   </div>
 
   <div class="form-group">
-    <label for="ailment-location">持病の箇所（あれば）：</label>
-    <select id="ailment-location" name="ailment-location" class="form-control">
-      <option value="なし">なし</option>
-      <option value="おなか">おなか</option>
-      <option value="頭">頭</option>
-      <option value="足">足</option>
-      <option value="手">手</option>
-      <option value="鼻">鼻</option>
-      <option value="目">目</option>
-      <option value="耳">耳</option>
-      <option value="口">口</option>
-        <option value="おしり">おしり</option>
-    </select>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="口"
+      id="symptom1"
+    />
+    <label class="form-check-label" for="symptom1">口</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="目"
+      id="symptom2"
+    />
+    <label class="form-check-label" for="symptom2">目</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="下痢"
+      id="symptom3"
+    />
+    <label class="form-check-label" for="symptom3">下痢</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="老化"
+      id="symptom4"
+    />
+    <label class="form-check-label" for="symptom4">老化</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="腫瘍"
+      id="symptom5"
+    />
+    <label class="form-check-label" for="symptom5">腫瘍</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="心臓"
+      id="symptom6"
+    />
+    <label class="form-check-label" for="symptom6">心臓</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="腎臓"
+      id="symptom7"
+    />
+    <label class="form-check-label" for="symptom7">腎臓</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="肝臓"
+      id="symptom8"
+    />
+    <label class="form-check-label" for="symptom8">肝臓</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="すい臓"
+      id="symptom9"
+    />
+    <label class="form-check-label" for="symptom9">すい臓</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="胃腸"
+      id="symptom10"
+    />
+    <label class="form-check-label" for="symptom10">胃腸</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="頻尿"
+      id="symptom11"
+    />
+    <label class="form-check-label" for="symptom11">頻尿</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="結石"
+      id="symptom12"
+    />
+    <label class="form-check-label" for="symptom12">結石</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="骨関節"
+      id="symptom13"
+    />
+    <label class="form-check-label" for="symptom13">骨関節</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="皮膚"
+      id="symptom14"
+    />
+    <label class="form-check-label" for="symptom14">皮膚</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="ダイエット"
+      id="symptom15"
+    />
+    <label class="form-check-label" for="symptom15">ダイエット</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="泌尿器"
+      id="symptom16"
+    />
+    <label class="form-check-label" for="symptom16">泌尿器</label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="symptom"
+      value="呼吸器"
+      id="symptom17"
+    />
+    <label class="form-check-label" for="symptom17">呼吸器</label>
+  </div>
+</div>
 
   </div>
   <div class="form-group">
@@ -139,11 +297,11 @@
                 const intelligence = $('input[name="intelligence"]').val()??"";
                 const suffix = $('input[name="suffix"]').val()??"";
                 const firstPerson = $('input[name="first-person"]').val()??"";
-                const ailmentLocation = $('select[name="ailment-location"]').val()??"";
+                const symptom = $('input[name="symptom"]:checked').val()??"";
                 const episode = $('input[name="episode"]').val()??"";
                 const birthdate = $('input[name="birthdate"]').val()??"";
 
-                const msg = `【ウチの子登録】\n${name}\n${type}\n${gender}\n${personality}\n${intelligence}\n${suffix}\n${firstPerson}\n${ailmentLocation}\n${episode}\n${birthdate}`;
+                const msg = `【ウチの子登録】\n${name}\n${type}\n${gender}\n${personality}\n${intelligence}\n${suffix}\n${firstPerson}\n${symptom.join(',')}\n${episode}\n${birthdate}`;
                 console.log(msg)
                 sendText(msg);
                 return false;
