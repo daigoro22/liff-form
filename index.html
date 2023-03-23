@@ -297,7 +297,7 @@
                 const intelligence = $('input[name="intelligence"]').val()??"";
                 const suffix = $('input[name="suffix"]').val()??"";
                 const firstPerson = $('input[name="first-person"]').val()??"";
-                const symptom = $('input[name="symptom"]:checked').val()??"";
+                const symptom = $('input[name="symptom"]:checked').map((s)=>s.val())??[];
                 const episode = $('input[name="episode"]').val()??"";
                 const birthdate = $('input[name="birthdate"]').val()??"";
 
