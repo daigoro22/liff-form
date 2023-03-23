@@ -290,6 +290,7 @@
 
         $(function () {
             $('form').submit(function () {
+                let symptomMsg = ''
                 const name    = $('input[name="name"]').val()??"";
                 const type = $('select[name="type"]').val()??"";
                 const gender  = $('input[name="gender"]:checked').val()??"";
@@ -297,11 +298,11 @@
                 const intelligence = $('input[name="intelligence"]').val()??"";
                 const suffix = $('input[name="suffix"]').val()??"";
                 const firstPerson = $('input[name="first-person"]').val()??"";
-                const symptom = $('input[name="symptom"]:checked').map((s)=>s.val())??[];
+                const symptom = $('input[name="symptom"]:checked').each(()=>symptomMsg+=$(this).val()+',')??[];
                 const episode = $('input[name="episode"]').val()??"";
                 const birthdate = $('input[name="birthdate"]').val()??"";
 
-                const msg = `【ウチの子登録】\n${name}\n${type}\n${gender}\n${personality}\n${intelligence}\n${suffix}\n${firstPerson}\n${symptom.join(',')}\n${episode}\n${birthdate}`;
+                const msg = `【ウチの子登録】\n${name}\n${type}\n${gender}\n${personality}\n${intelligence}\n${suffix}\n${firstPerson}\n${symptomMsg}\n${episode}\n${birthdate}`;
                 console.log(msg)
                 sendText(msg);
                 return false;
