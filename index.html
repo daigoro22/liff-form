@@ -59,6 +59,26 @@
   </div>
 
   <div class="form-group">
+    <label for="userNickname">飼い主の呼び名：</label>
+    <input type="text" id="userNickname" name="userNickname" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="favoriteFood">お気に入りの餌：</label>
+    <input type="text" id="favoriteFood" name="favoriteFood" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="favoriteToy">お気に入りのおもちゃ：</label>
+    <input type="text" id="favoriteToy" name="favoriteToy" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="playActivities">お気に入りの遊び：</label>
+    <input type="text" id="playActivities" name="playActivities" class="form-control">
+  </div>
+
+  <div class="form-group">
     <label for="suffix">語尾：</label>
     <input type="text" id="suffix" name="suffix" class="form-control">
   </div>
@@ -296,13 +316,17 @@
                 const gender  = $('input[name="gender"]:checked').val()??"";
                 const personality  = $('input[name="personality"]').val()??"";
                 const intelligence = $('input[name="intelligence"]').val()??"";
+                const userNickname = $('input[name="userNickname"]').val()??"";
+                const favoriteFood = $('input[name="favoriteFood"]').val()??"";
+                const favoriteToy = $('input[name="favoriteToy"]').val()??"";
+                const playActivities = $('input[name="playActivities"]').val()??"";
                 const suffix = $('input[name="suffix"]').val()??"";
                 const firstPerson = $('input[name="first-person"]').val()??"";
                 const symptom = $('input:checkbox[name="symptom"]:checked').each(function (){symptomMsg+=$(this).val()+','})??[];
                 const episode = $('input[name="episode"]').val()??"";
                 const birthdate = $('input[name="birthdate"]').val()??"";
 
-                const msg = `【ウチの子登録】\n${name}\n${type}\n${gender}\n${personality}\n${intelligence}\n${suffix}\n${firstPerson}\n${symptomMsg}\n${episode}\n${birthdate}`;
+                const msg = `【ウチの子登録】\n${name}\n${type}\n${gender}\n${personality}\n${intelligence}\n${userNickname}\n${favoriteFood}\n${favoriteToy}\n${playActivities}\n${suffix}\n${firstPerson}\n${symptomMsg}\n${episode}\n${birthdate}`;
                 console.log(msg)
                 sendText(msg);
                 return false;
